@@ -1,4 +1,3 @@
-/* Reset dan dasar */
 * {
     margin: 0;
     padding: 0;
@@ -10,64 +9,43 @@ body {
     line-height: 1.6;
 }
 
-/* Header */
 header {
     background: #333;
     color: #fff;
     padding: 15px 0;
-    display: flex;
-    flex-direction: column; /* Mengubah orientasi menjadi kolom */
-    align-items: center; /* Memusatkan konten secara horizontal */
 }
 
 .container {
     display: flex;
-    flex-direction: column; /* Mengubah menjadi kolom untuk logo dan nav */
-    align-items: center; /* Memusatkan konten */
+    flex-direction: column; /* Mengatur agar konten header ditampilkan secara kolom */
+    align-items: center; /* Memusatkan konten secara horizontal */
 }
 
 .logo {
     font-size: 24px;
     font-weight: bold;
-    margin-bottom: 10px; /* Jarak antara logo dan navigasi */
+    margin-bottom: 10px; /* Spasi di bawah logo */
 }
 
 nav {
     display: flex;
+    justify-content: center; /* Memusatkan navigasi */
 }
 
 .nav-links {
     list-style: none;
     display: flex;
-}
-
-.nav-links li {
-    margin: 0 15px;
+    gap: 20px; /* Jarak antar item navigasi */
 }
 
 .nav-links a {
     color: white;
     text-decoration: none;
-    transition: color 0.3s ease, text-shadow 0.3s ease; /* Transisi untuk efek glow */
+    transition: color 0.3s ease;
 }
 
 .nav-links a:hover {
     color: #ff9900;
-    text-shadow: 0 0 5px #ff9900, 0 0 10px #ff9900, 0 0 15px #ff9900; /* Efek glow */
-}
-
-/* Tombol toggle untuk mobile */
-.menu-toggle {
-    display: none;
-    flex-direction: column;
-    cursor: pointer;
-}
-
-.menu-toggle .bar {
-    height: 3px;
-    width: 25px;
-    background: white;
-    margin: 3px 0;
 }
 
 /* Hero section */
@@ -125,66 +103,53 @@ h2 {
     margin: 10px; /* Spasi antar kolom */
 }
 
+/* Gambar di hero section */
+.hero-images {
+    display: flex;
+    justify-content: center;
+    margin: 20px 0;
+}
+
+.hero-image {
+    width: 75%; /* Mengubah ukuran gambar menjadi 75% dari lebar container */
+    margin: 0 10px; /* Spasi antar gambar */
+}
+
 /* Footer styles */
 footer {
     background: #333;
     color: #fff;
     padding: 20px 0;
-    text-align: center; /* Memusatkan teks dalam footer */
+    text-align: center;
 }
 
 .footer-container {
     display: flex;
-    flex-direction: column; /* Membuat elemen di footer ditampilkan secara vertikal */
-    align-items: center; /* Memusatkan elemen secara horizontal */
+    flex-direction: column;
+    align-items: center;
+}
+
+.footer-logo {
+    font-size: 20px;
+    margin-bottom: 10px;
 }
 
 .footer-links {
-    list-style: none;
-    display: flex;
-    gap: 20px; /* Jarak antar item navigasi */
-    margin: 10px 0; /* Jarak antara navigasi dan copyright */
+    margin: 10px 0;
 }
 
 .footer-links a {
-    color: white; /* Warna teks tautan */
-    text-decoration: none; /* Hapus garis bawah */
-    transition: color 0.3s ease, text-shadow 0.3s ease; /* Transisi untuk efek glow */
+    color: #ff9900;
+    text-decoration: none;
+    margin: 0 10px;
 }
 
 .footer-links a:hover {
-    color: #ff9900;
-    text-shadow: 0 0 5px #ff9900, 0 0 10px #ff9900, 0 0 15px #ff9900; /* Efek glow */
-}
-
-.footer-container p {
-    margin-top: 10px; /* Jarak antara navigasi dan copyright */
+    text-decoration: underline;
 }
 
 /* Responsive styles */
 @media (max-width: 768px) {
-    .nav-links {
-        display: none;
-        flex-direction: column;
-        position: absolute;
-        top: 60px;
-        right: 0;
-        background: #333;
-        width: 100%;
-    }
-
-    .menu-toggle {
-        display: flex;
-    }
-
-    .nav-active {
-        display: flex;
-    }
-
-    .hero h1 {
-        font-size: 28px;
-    }
-
     .section {
         padding: 30px 10px;
     }
